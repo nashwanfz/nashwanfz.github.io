@@ -1,0 +1,342 @@
+/* Global Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://themeforest.img.customer.envatousercontent.com/files/257733346/InlinePreview.png?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=291696c0c6416df78088c08bdcb1242b');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 15px;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Toggle Dark Mode */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* Light Mode Styles */
+.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.light-mode .header {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.light-mode .navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.light-mode .navbar a {
+    color: #000;
+}
+
+.light-mode .navbar a:hover {
+    background-color: #ddd;
+}
+
+.light-mode .section {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.light-mode .dark-mode-toggle {
+    background-color: #ddd;
+    color: #000;
+}
+
+.light-mode .menu-button {
+    background-color: #ddd;
+    color: #000;
+}
+.light-mode body {
+    background-image: none;
+    background-color: #f0f0f0;
+}
+/* Atur ulang opasitas di Light Mode */
+.light-mode #about {
+    background-color: rgba(255, 255, 255, 0.9); /* Warna yang lebih terang */
+    color: #000; /* Warna teks gelap */
+}
+.light-mode .section h2,
+.light-mode .section p {
+    color: #000; /* Ubah menjadi hitam agar terbaca di background terang */
+}
+.light-mode body {
+    background-image: none; /* Hapus gambar background */
+    background-color: #f0f0f0; /* Atau gunakan warna background terang */
+}
+
+/* Mobile Menu */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.section:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+/* About Me */
+#about {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    text-align: center;
+}
+
+/* Pop-up */
+.popup, .overlay {
+    display: none;
+}
+
+.popup.active, .overlay.active {
+    display: block;
+}
+
+/* Game Carousel Section */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.carousel img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+
+/* Animation for scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Mobile Menu */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Pop-up Styles */
+.popup, .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+
+.popup {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    margin: 100px auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+}
+
+.popup.active, .overlay.active {
+    display: block;
+}
+
+.auth-form, .review-form {
+    background-color: #1e1e1e; /* Warna latar belakang seragam dengan tema */
+    color: #ffffff;            /* Teks putih sesuai tema */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;          /* Batas lebar form */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+}
+
+.auth-form label, .review-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;               /* Warna teks sesuai tema */
+}
+
+.auth-form input, .review-form input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #333;     /* Border sesuai tema gelap */
+    background-color: #333;     /* Warna input field */
+    color: #fff;                /* Warna teks input */
+}
+
+.auth-form button, .review-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-form button:hover, .review-form button:hover {
+    background-color: #45a049;
+}
+
+/* Menyesuaikan dengan background utama */
+body {
+    background-color: #121212; /* Warna gelap pada tema utama */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centering content */
+#auth-section, #review-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Style for the review button */
+.btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;              /* White text */
+    padding: 10px 20px;        /* Some padding */
+    text-align: center;        /* Centered text */
+    text-decoration: none;     /* Remove underlines */
+    display: inline-block;     /* Make the button behave like a block element */
+    font-size: 16px;           /* Button text size */
+    margin: 20px 0;            /* Some margin */
+    cursor: pointer;           /* Pointer cursor on hover */
+    border-radius: 5px;        /* Rounded corners */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
