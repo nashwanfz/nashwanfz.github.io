@@ -133,7 +133,7 @@ if (!isset($_SESSION['logged_in'])) {
             </div>
 
             <div class="game-item" data-name="Tomb Raider">
-                <img src="TR.jpg" alt="Tomb Raider">
+                <img src="TombRaider.jpg" alt="Tomb Raider">
                 <h3>Tomb Raider</h3>
                 <p>An action-adventure game that follows the adventures of Lara Croft.</p>
             </div>
